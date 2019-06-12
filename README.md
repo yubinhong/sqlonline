@@ -21,6 +21,8 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
+### 5.效果图
+![](https://res.cloudinary.com/dc6pgic7p/image/upload/v1560330743/sqlonline.png)
 如果想使用uwsgi+nginx，也是可行的，可以参考uwsgi-sql.ini的配置。安装就不多说了。
 
 
