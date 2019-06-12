@@ -32,12 +32,7 @@ def index(request):
             result['message'] = "The database can not to select"
             result['code'] = "300004"
             return HttpResponse(json.dumps(result))
-        if database == "exchange":
-            sql_list = sql.split()
-            if sql_list[3] == "pks":
-                result['message'] = "The table can not to select"
-                result['code'] = "300005"
-                return HttpResponse(json.dumps(result))
+
         try:
             userobj = models.UserProfile.objects.get(product=prod, env=env)
             result = sqltools.select(userobj.mysql_host, userobj.mysql_port, userobj.mysql_user, userobj.mysql_pwd, sql, database)
